@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<style>
+    @import url('https://fonts.cdnfonts.com/css/anime-ace');
+</style>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario JAnime</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <button>Menu</button>
+        <button>Home</button>
+    </header>
+
+    <div id="container">
+        <div id="form-container">
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required min="0">
+
+                <label for="anime">Anime favorito:</label>
+                <input type="text" id="anime" name="anime" required>
+
+                <label for="tipo">Tipo:</label>
+                <input type="text" id="tipo" name="tipo" required>
+
+                <label for="genero">Genero:</label>
+                <input type="text" id="genero" name="genero" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button>Enviar</button>
+            </form>
+        </div>
+
+        <div id="welcome-text">
+            ¡Hola, bienvenido a JAnime! ^W^
+        </div>
+    </div>
+
+    <footer>
+        <div class="carousel">
+            <div class="image-container">
+                <img src="imagenes/kimet.jpg" alt="Imagen 1" >
+                <div class="image-overlay" onclick="changeBackground('imagenes/kimet.jpg')">K.N.Y</div>
+            </div>
+            <div class="image-container">
+                <img src="imagenes/one_pun.png" alt="Imagen 2" >
+                <div class="image-overlay" onclick="changeBackground('imagenes/one_pun.png')">O.P.M</div>
+            </div>
+            <div class="image-container">
+                <img src="imagenes/attack.jpg" alt="Imagen 3" >
+                <div class="image-overlay" onclick="changeBackground('imagenes/attack.jpg')">A.O.T</div>
+            </div>
+            <div class="image-container">
+                <img src="imagenes/dragon.jpg" alt="Imagen 4" >
+                <div class="image-overlay" onclick="changeBackground('imagenes/dragon.jpg')">D.B.Z</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function changeBackground(image) {
+            document.body.style.backgroundImage = `url('${image}')`;
+        }
+    </script>
+</body>
+</html>
+

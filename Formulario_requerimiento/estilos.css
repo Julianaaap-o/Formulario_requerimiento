@@ -1,0 +1,129 @@
+body {
+    font-family: 'Anime Ace', sans-serif;
+    background-image: url('imagenes/fondoIni.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    color: #0f0f0f;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+header button {
+    background-color: #007BFF;
+    color: #0e0d0d;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Anime Ace', sans-serif;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 150px);
+    position: relative;
+    padding: 20px;
+}
+
+#form-container {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 350px;
+    width: 100%;
+}
+
+#form-container input[type="text"],
+#form-container input[type="number"],
+#form-container input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #080808;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Anime Ace', sans-serif;
+    color: #030303;
+    text-shadow: -3px 2px white;
+}
+
+#form-container button {
+    color: rgb(8, 8, 8);
+    font-family: 'Anime Ace', 'sans-serif';
+    padding: 9px;
+    margin: 4px 0;
+    border: 1px solid #080808;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#welcome-text {
+    font-size: 2em;
+    color: #080808;
+    margin-left: 30px;
+    font-family: 'Anime ace', sans-serif; 
+    text-shadow: -3px 2px white;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.carousel {
+    display: flex;
+    gap: 10px;
+}
+
+.image-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #030303;
+    background-color: rgba(209, 201, 201, 0.6); /* Semi-transparente */
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    z-index: 1; /* Asegura que el texto esté sobre la imagen */
+}
+
+.image-container:hover .image-overlay {
+    opacity: 1;
+}
+
+.image-container:hover img {
+    opacity: 0.4; /* Imagen se opaca */
+    transform: scale(1.1); /* Imagen ligeramente ampliada */
+}
